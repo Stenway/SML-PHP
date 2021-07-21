@@ -19,6 +19,10 @@ class SmlAttribute extends SmlNamedNode {
 		$this->values = $values;
 	}
 	
+	function setValue(string $value) {
+		$this->setValues(array($value));
+	}
+	
 	function getValues() : array {
 		return $this->values;
 	}
