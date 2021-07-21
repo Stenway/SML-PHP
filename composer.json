@@ -1,0 +1,22 @@
+{
+    "name": "stenway/sml",
+    "description": "The Simple Markup Language (SML) reference library",
+    "type": "library",
+    "homepage": "https://www.simpleml.com",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Stenway\\Sml\\": "src/Stenway/Sml"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stefan John",
+            "email": "dev@stenway.com"
+        }
+    ],
+    "require": {
+		"stenway/reliabletxt": "^0.0.1",
+		"stenway/wsv": "^0.0.1"
+	}
+}
