@@ -92,7 +92,7 @@ class SmlParser {
 			}
 		} else {
 			$emptyNode = new SmlEmptyNode();
-			$emptyNode._setWhitespacesAndComment($line->getWhitespaces(), $line->getComment());
+			$emptyNode->_setWhitespacesAndComment($line->getWhitespaces(), $line->getComment());
 
 			$node = $emptyNode;
 		}
@@ -139,11 +139,11 @@ class SmlParser {
 				}
 			}
 		}
-		throw getParserException(count($wsvDocument->lines)-1, self::END_KEYWORD_COULD_NOT_BE_DETECTED);
+		throw self::getParserException(count($wsvDocument->lines)-1, self::END_KEYWORD_COULD_NOT_BE_DETECTED);
 	}
 	
 	private static function getParserException(int $line, string $message) {
-		return new Exception(sprintf("%s (%d)", $message, $line));
+		return new Exception(sprintf("%s (%d)", $message, $line + 1));
 	}
 	
 	private static function getException(WsvLineIterator $iterator, string $message) {
