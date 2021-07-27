@@ -4,6 +4,7 @@ namespace Stenway\Sml;
 
 use \Stenway\ReliableTxt\ReliableTxtDocument as ReliableTxtDocument;
 use \Stenway\ReliableTxt\ReliableTxtEncoding as ReliableTxtEncoding;
+use \Stenway\Wsv\WsvString as WsvString;
 
 class SmlDocument {
 	private SmlElement $root;
@@ -21,7 +22,7 @@ class SmlDocument {
 	function setDefaultIndentation(?string $defaultIndentation) {
 		if ($defaultIndentation !== null && strlen($defaultIndentation) > 0 &&
 				!WsvString::isWhitespace($defaultIndentation)) {
-			throw new IllegalArgumentException(
+			throw new \InvalidArgumentException(
 					"Indentation value contains non whitespace character");
 		}
 		$this->defaultIndentation = $defaultIndentation;

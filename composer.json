@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-		"stenway/reliabletxt": "^0.0.1",
-		"stenway/wsv": "^0.0.1"
+		"stenway/reliabletxt": "^0.0.2",
+		"stenway/wsv": "^0.0.2"
 	}
 }

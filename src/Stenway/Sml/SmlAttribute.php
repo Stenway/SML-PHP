@@ -14,7 +14,7 @@ class SmlAttribute extends SmlNamedNode {
 	
 	function setValues(array $values) {
 		if ($values === null || count($values) == 0) {
-			throw new Exception("Values must contain at least one value");
+			throw new \Exception("Values must contain at least one value");
 		}
 		$this->values = $values;
 	}

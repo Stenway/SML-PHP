@@ -12,7 +12,7 @@ class SmlRequest {
 		$requestDocument = null;
 		try {
 			$requestDocument = SmlDocument::parse($smlRequest);
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			SmlResponse::writeError("Request SML document is invalid", $e->getMessage());
 			return null;
 		}

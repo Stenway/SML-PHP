@@ -2,7 +2,6 @@
 
 namespace Stenway\Sml;
 
-use \Exception as Exception;
 use \Stenway\Wsv\WsvDocument as WsvDocument;
 
 class SmlParser {
@@ -143,7 +142,7 @@ class SmlParser {
 	}
 	
 	private static function getParserException(int $line, string $message) {
-		return new Exception(sprintf("%s (%d)", $message, $line + 1));
+		return new \Exception(sprintf("%s (%d)", $message, $line + 1));
 	}
 	
 	private static function getException(WsvLineIterator $iterator, string $message) {

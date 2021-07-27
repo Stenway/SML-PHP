@@ -2,8 +2,6 @@
 
 namespace Stenway\Sml;
 
-use \Exception as Exception;
-
 use \Stenway\Wsv\WsvLine as WsvLine;
 use \Stenway\Wsv\WsvDocument as WsvDocument;
 use \Stenway\Wsv\WsvSerializer as WsvSerializer;
@@ -52,7 +50,7 @@ class SmlSerializer {
 	public static function serializeElement(SmlElement $element, WsvDocument $wsvDocument,
 			int $level, ?string $defaultIndentation, ?string $endKeyword) {
 		if ($endKeyword != null && $element->hasName($endKeyword)) {
-			throw new Exception("Element name matches the end keyword '" . $endKeyword . "'");
+			throw new \Exception("Element name matches the end keyword '" . $endKeyword . "'");
 		}
 		$childLevel = $level + 1;
 		
